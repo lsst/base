@@ -1,4 +1,5 @@
 setupRequired(sconsUtils)
+setupRequired(nanobind_shared)
 
 envPrepend(LD_LIBRARY_PATH, ${PRODUCT_DIR}/lib)
 envPrepend(DYLD_LIBRARY_PATH, ${PRODUCT_DIR}/lib)
