@@ -20,11 +20,11 @@
  * see <https://www.lsstcorp.org/LegalNotices/>.
  */
 
-#include "pybind11/pybind11.h"
+#include <nanobind/nanobind.h>
 
 #include "lsst/base/ModuleImporter.h"
 
-namespace py = pybind11;
+namespace nb = nanobind;
 
 namespace {
 
@@ -34,6 +34,6 @@ bool doImport(char const * name) {
 
 }  // namespace
 
-PYBIND11_MODULE(testModuleImporterLib, mod) {
+NB_MODULE(testModuleImporterLib, mod) {
     mod.def("doImport", &doImport);
 }

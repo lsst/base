@@ -1,6 +1,5 @@
 # -*- python -*-
 from lsst.sconsUtils import scripts
-
-scripts.BasicSConscript.pybind11(['testModuleImporterLib'], addUnderscore=False)
+scripts.BasicSConscript.python('testModuleImporterLib', ['testModuleImporterLib.cc'])
 scripts.BasicSConscript.tests(noBuildList=['testModuleImporterLib.cc'],
                               pySingles=['testModuleImporter2.py'], pyList=[])
