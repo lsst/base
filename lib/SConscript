@@ -1,3 +1,4 @@
 # -*- python -*-
 from lsst.sconsUtils import scripts
-scripts.BasicSConscript.lib(libs=["dl"])
+from sys import version_info
+scripts.BasicSConscript.lib(libs=["dl",f"python{version_info.major}.{version_info.minor}"])
