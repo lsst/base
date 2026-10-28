@@ -1,0 +1,12 @@
+prefix=${pcfiledir}/../..
+includedir=${prefix}/include
+libdir=${prefix}/lib
+doxygen_tag=${prefix}/doc/base.tag
+doxygen_include=${prefix}/doc/base.inc
+lsst_build_requires=python3 pybind11
+
+Name: lsst_base
+Description: LSST Science Pipelines low-level base utilities
+Version: @VERSION@
+Cflags: -I${includedir}
+Libs: -L${libdir} -lbase
